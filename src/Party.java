@@ -27,7 +27,9 @@ public class Party extends Counter {
     Party.next = false;
     }
     public static void partyStatus() {
-    String result = Party.next ? String.format("Anzahl Gäste: %d", Party.count): "Party is over!";
+    String result = Party.next
+            ? String.format("Anzahl Gäste: %d", Party.count)
+            : "Party is over!";
     System.out.println(result);
     }
 }
