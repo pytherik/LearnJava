@@ -25,6 +25,9 @@ public String toString() {
 System.out.println(myFoo)
 ```
 
+# access modifiers (public, protected, private)
+
+
 # static keyword
 
 > static = modifier. A single copy of a variable/method  
