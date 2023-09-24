@@ -1,4 +1,5 @@
 public class Music {
+  static int numberOfSongs;
   String song;
   String artist;
   String album;
@@ -9,6 +10,11 @@ public class Music {
     this.artist = artist;
     this.album = album;
     this.year = year;
+    numberOfSongs++;
+  }
+
+  public static void getNumberOfSongs() {
+    System.out.format("You have %d songs in your collection!", numberOfSongs);
   }
 
   public String toString() {

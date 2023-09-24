@@ -16,11 +16,18 @@ Speicheradresse, sonder wie im return angegeben ausgegeben.
 ```java
 // class Foo
 public String toString() {
-    return String.format("Attribut 1: %s\nAttribute 2:"
-    , this.attr1, this.attr2);
+    return String.format("Attribut 1: %s\nAttribute 2:",
+        this.attr1, this.attr2);
 ```
 
 ```java
 // main
 System.out.println(myFoo)
 ```
+
+# static keyword
+
+> static = modifier. A single copy of a variable/method  
+> is created and shared. The Class owns the static member.   
+
+
