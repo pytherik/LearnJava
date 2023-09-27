@@ -1,17 +1,30 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Eingabe with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+  public static void main(String[] args) {
+    // exception = an event that occurs during the execution of a
+    //             program that disrupts the normal flow
 
-        // Press Umschalt+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+    try {
+      Scanner scanner = new Scanner(System.in);
+      System.out.println("Gib die zu teilende Zahl ein:");
+      int x = scanner.nextInt();
+      System.out.println("Gib eine ganze Zahl zum dividieren ein:");
+      int y = scanner.nextInt();
+      int z = x / y;
 
-            // Press Umschalt+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Strg+F8.
-            System.out.println("i = " + i);
-        }
+      System.out.println("Ergebnis: " + z);
+    } catch (ArithmeticException e) {
+      System.out.println("Du kannst nicht durch 0 teilen!");
+    } catch (InputMismatchException e) {
+      System.out.println("Du musst eine ganze Zahlen eingeben");
+    } catch (Exception e) {
+      System.out.println("Ein Fehler ist aufgetreten!");
+    } finally {
+      System.out.println("Ich komme immer wieder!");
     }
+  }
 }
